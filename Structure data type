@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+struct distance
+{
+    float x,y,result,dis;
+};
+int main()
+{
+    struct distance a,b,d;
+    printf ("Enter point a: ");
+    scanf ("%f %f",&a.x,&a.y);
+    printf ("Enter point b: ");
+    scanf ("%f %f",&b.x,&b.y);
+    a.result= (a.x-b.x)*(a.x-b.x);
+    b.result= (a.y-b.y)*(a.y-b.y);
+    d.dis= sqrt(a.result+b.result);
+    printf ("\nThe distance between a and b is: %.2f",d.dis);
+    return 0;
+}
